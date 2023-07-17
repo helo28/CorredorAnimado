@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    background: url(mario.jpg); /*IMAGEM DO FUNDO*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*PARTE ESCRITA NA TELA*/
+.titulo{
+    top: 100px;
+    left: 300px;
+    font-size: 50px;
+    position: absolute;
+    color: blue;
+    border: 1px solid deepskyblue;
+    border-radius: 30px;
+    background: lightblue;
+    padding: 10px;
+    box-shadow: 5px 5px 10px black;
+}
+
+.corredor {
+    position: absolute;
+    /*top: 80%;*/
+    bottom: 50px;
+    left: 5%;
+    background: url(megaMenInteiropng.png);
+    overflow: hidden;
+    height: 66px;
+    width: calc(707px / 10);
+    animation: correr 1s steps(10) infinite,
+               mover 10s linear infinite; /*STEPS SERVE PARA COLOCAR A QUANTIDADE DE PASSOS*/
+}
+
+@keyframes correr {
+    0% {background-position: 0px;}
+    100% {background-position: -702px ;}
+}
+
+@keyframes mover {
+    0% {transform: translateX(-100px);}
+    100% {transform: translateX(1800px);}
+}
